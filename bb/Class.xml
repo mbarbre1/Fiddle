@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+
+<extension>
+	<interface>
+	</interface>
+	
+	<impl>
+		<!-- imports -->
+		<import>java.util.ArrayList</import>
+		<import>java.util.List</import>
+		<import>org.jdom.Document</import>
+		<import>org.jdom.Element</import>
+		<import>org.jdom.Namespace</import>
+		<import>com.barbre.fiddle.elements.IElement</import>
+		<import>com.barbre.fiddle.elements.INode</import>
+		<import>com.barbre.fiddle.elements.UIFile</import>
+	
+		<!-- implementation -->
+		<implements>XMLDataLoader</implements>
+		<implements>XMLDataCreator</implements>
+	
+		<!-- methods -->
+		<method>
+			public void loadXMLData(Element el, Namespace ns) {
+				setType(el.getName());
+				setItem(el.getAttributeValue("item"));
+				elements = _ElementMap.createElement(_EQUtilities.getType(this, getType()));
+				if (elements != null)
+					elements.populate(this, el);
+				else
+					System.out.println("Type is null: " + el.getName());
+			}
+		</method>
+		<method>		
+			public void createXMLData(UIFile file, Document doc, Element parent, Namespace ns) {
+				Element me = new Element(getType());
+				parent.addContent(me);
+				if (getItem() != null)
+					me.setAttribute("item", getItem());
+				String[] keys = _EQUtilities.getOrderedSIDLKeys(this, getType());
+				for (int i = 0; i &lt; keys.length; i++) {
+					IElement el = elements.get(keys[i]);
+					if ((el.getValue() != null) &amp;&amp; !el.getValue().equals(el.getDefaultValue())) {
+						if (el.isPrimitive() || el.isItemReference()) {
+							writePrimitive(me, el);
+						} else {
+							writeElement(file, doc, ns, me, el);
+						}
+					}
+				}
+			}
+		</method>
+		<method>
+			private void writeElement(UIFile file, Document doc, Namespace ns, Element me, IElement el) {
+				if (el.isArray()) {
+					Object[] o = (Object[]) el.getValue();
+					for (int j = 0; j &lt; o.length; j++) {
+						((XMLDataCreator) o[j]).createXMLData(file, doc, me, ns);
+					}
+				} else {
+					if (el.getValue() instanceof IClass) {
+						((XMLDataCreator) el.getValue()).createXMLData(file, doc, me, ns);
+					} else {
+						Element me2 = new Element(el.getName());
+						me.addContent(me2);
+						((XMLDataCreator) el.getValue()).createXMLData(file, doc, me2, ns);
+					}
+				}
+			}
+		</method>
+		<method>		
+			private void writePrimitive(Element me, IElement el) {
+				if (el.isArray()) {
+					String[] o = (String[]) el.getValue();
+					for (int j = 0; j &lt; o.length; j++) {
+						Element node = new Element(el.getName());
+						node.setText("" + o[j]);
+						me.addContent(node);
+					}
+				} else {
+					Element node = new Element(el.getName());
+					node.setText("" + el.getValue());
+					me.addContent(node);
+				}
+			}
+		</method>
+	</impl>
+</extension>

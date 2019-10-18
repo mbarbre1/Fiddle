@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+    <jar path="C:/eclipse/workspace/Fiddle/fiddle.jar"/>
+    <options buildIfNeeded="true" compress="true"
+        descriptionLocation="/Fiddle/fiddle.jardesc" exportErrors="true"
+        exportWarnings="true" overwrite="false" saveDescription="true" useSourceFolders="false"/>
+    <manifest generateManifest="false"
+        mainClassHandleIdentifier="=Fiddle/source&lt;com.barbre.fiddle{Fiddle.java[Fiddle"
+        manifestLocation="/Fiddle/manifest.mf" manifestVersion="1.0"
+        reuseManifest="true" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false">
+        <javaElement handleIdentifier="=Fiddle/source"/>
+    </selectedElements>
+</jardesc>

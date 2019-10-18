@@ -1,0 +1,244 @@
+<?xml version = "1.0"?>
+
+<basic>
+
+	<Button item = "Button">
+		<ScreenID>Button</ScreenID>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<Text>Text</Text>
+		<TextColor/>
+		<Style_Checkbox>false</Style_Checkbox>
+		<ButtonDrawTemplate>
+			<Normal>A_BtnNormal</Normal>
+			<Pressed>A_BtnPressed</Pressed>
+			<Flyby>A_BtnFlyby</Flyby>
+			<Disabled>A_BtnDisabled</Disabled>
+			<PressedFlyby>A_BtnPressedFlyby</PressedFlyby>
+		</ButtonDrawTemplate>
+	</Button>
+
+
+
+
+	<Combobox item = "Combobox">
+		<ScreenID>Combobox</ScreenID>
+		<DrawTemplate>WDT_Inner</DrawTemplate>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<TextColor/>
+		<ListHeight>80</ListHeight>
+		<Button>BDT_Combo</Button>
+		<Style_Border>true</Style_Border>
+	</Combobox>
+
+
+
+
+	<Editbox item = "Editbox">
+		<ScreenID>Editbox</ScreenID>
+		<DrawTemplate>WDT_Inner</DrawTemplate>
+		<RelativePosition>true</RelativePosition>
+		<Style_Border>true</Style_Border>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<TextColor/>
+	</Editbox>
+
+
+
+
+	<Gauge item = "Gauge">
+		<ScreenID>Gauge</ScreenID>
+		<RelativePosition>true</RelativePosition>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<FillTint/>
+		<LinesFillTint/>
+		<DrawLinesFill>false</DrawLinesFill>
+		<GaugeDrawTemplate>
+			<Background>A_GaugeBackground</Background>
+			<Fill>A_GaugeFill</Fill>
+			<Lines>A_GaugeLines</Lines>
+			<LinesFill>A_GaugeLinesFill</LinesFill>
+			<EndCapLeft>A_GaugeEndCapLeft</EndCapLeft>
+			<EndCapRight>A_GaugeEndCapRight</EndCapRight>
+		</GaugeDrawTemplate>
+	</Gauge>
+
+
+
+
+	<InvSlot item = "InvSlot">
+		<ScreenID>InvSlot</ScreenID>
+		<RelativePosition>true</RelativePosition>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<Background>A_InvEar</Background>
+		<EQType>1</EQType>
+		<Style_VScroll>false</Style_VScroll>
+		<Style_HScroll>false</Style_HScroll>
+		<Style_Transparent>false</Style_Transparent>
+	</InvSlot>
+
+
+
+
+	<Label item ="Label">
+		<ScreenID>Label</ScreenID>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<Text>Text</Text>
+		<TextColor/>
+	</Label>
+
+
+
+
+	<Listbox item = "Listbox">
+		<ScreenID>Listbox</ScreenID>
+		<DrawTemplate>WDT_Inner</DrawTemplate>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<TextColor/>
+		<Columns>
+			<Width>125</Width>
+			<Heading>A Column</Heading>
+		</Columns>
+	</Listbox>
+
+
+
+
+	<Page item = "Page">
+		<ScreenID>Page</ScreenID>
+		<DrawTemplate>WDT_Def</DrawTemplate>
+		<TabText>tab</TabText>
+		<TabTextColor/>
+		<TabTextActiveColor/>
+	</Page>
+
+
+
+
+	<Screen item = "Screen">
+		<RelativePosition>false</RelativePosition>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<Text>Text</Text>
+		<Style_Transparent>false</Style_Transparent>
+		<DrawTemplate>WDT_Def</DrawTemplate>
+		<Style_Titlebar>true</Style_Titlebar>
+		<Style_Closebox>true</Style_Closebox>
+		<Style_Minimizebox>true</Style_Minimizebox>
+		<Style_Border>true</Style_Border>
+		<Style_Sizable>true</Style_Sizable>
+	</Screen>
+
+
+
+
+	<Slider item = "Slider">
+		<ScreenID>Slider</ScreenID>
+		<RelativePosition>true</RelativePosition>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<SliderArt>SDT_DefSlider</SliderArt>
+	</Slider>
+
+
+
+
+	<SpellGem item = "SpellGem">
+		<ScreenID>SpellGem</ScreenID>
+		<RelativePosition>true</RelativePosition>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<SpellGemDrawTemplate>
+			<Holder>A_SpellGemHolder</Holder>
+			<Background>A_SpellGemBackground</Background>
+			<Highlight>A_SpellGemHighlight</Highlight>
+		</SpellGemDrawTemplate>
+	</SpellGem>
+
+
+
+
+	<StaticAnimation item= "Anim">
+		<ScreenID>Anim</ScreenID>
+        <Location>
+            <X>5</X>
+            <Y>5</Y>
+        </Location>
+        <Size>
+			<CX>20</CX>
+			<CY>20</CY>
+		</Size>
+		<Animation>A_ClassAnim01</Animation>
+	</StaticAnimation>
+
+
+
+
+	<!-- StaticText STMLbox TabBox -->
+</basic>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="source"/>
+	<classpathentry sourcepath="JRE_SRC" kind="var" path="JRE_LIB"/>
+	<classpathentry kind="src" path="/Core"/>
+	<classpathentry kind="lib" path="/jdom-b9/lib/ant.jar"/>
+	<classpathentry kind="lib" path="/jdom-b9/lib/jaxen-core.jar"/>
+	<classpathentry kind="lib" path="/jdom-b9/lib/jaxen-jdom.jar"/>
+	<classpathentry kind="lib" path="/jdom-b9/lib/saxpath.jar"/>
+	<classpathentry kind="lib" path="/jdom-b9/lib/xalan.jar"/>
+	<classpathentry kind="lib" path="/jdom-b9/lib/xerces.jar"/>
+	<classpathentry kind="lib" path="/jdom-b9/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="/jdom-b9/build/jdom.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

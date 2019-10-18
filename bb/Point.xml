@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<extension>
+	<interface>
+		<import>java.awt.Point</import>
+		<method>Point getPoint();</method>
+		<method>void setPoint(Point p);</method>
+	</interface>
+
+
+	<impl>
+		<import>java.awt.Point</import>
+		<method>
+			public Point getPoint() {
+				return new Point(getX(), getY());
+			}
+		</method>
+		<method>
+			public void setPoint(Point p) {
+				setX(p.x);
+				setY(p.y);
+			}
+		</method>
+	</impl>
+</extension>

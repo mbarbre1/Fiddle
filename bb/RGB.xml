@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<extension>
+	<interface>
+		<import>java.awt.Color</import>
+		<method>Color getColor();</method>
+		<method>void setColor(Color c);</method>
+	</interface>
+	
+	
+	<impl>
+		<import>java.awt.Color</import>
+
+		<method>
+			public Color getColor() {
+				return new Color(getR(), getG(), getB(), getAlpha());
+			}
+		</method>
+
+		<method>
+			public void setColor(Color c) {
+				setAlpha(c.getAlpha());
+				setR(c.getRed());
+				setG(c.getGreen());
+				setB(c.getBlue());
+			}
+		</method>
+	</impl>
+</extension>

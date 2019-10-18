@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<extension>
+	<interface>
+		<import>java.awt.Dimension</import>
+		<method>Dimension getSize();</method>
+		<method>void setDimension(Dimensino d);</method>
+	</interface>
+	
+	
+	<impl>
+		<import>java.awt.Dimension</import>
+		<method>
+			public Dimension getSize() {
+				return new Dimension(getCX(), getCY());
+			}
+		</method>
+		<method>
+			public void setSize(Dimension d) {
+				setCX(d.width);
+				setCY(d.height);
+			}
+		</method>
+	</impl>
+</extension>

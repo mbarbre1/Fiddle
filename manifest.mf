@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+class-path: xerces.jar xalan.jar crimson.jar jaxp.jar jdom.jar b44_core.jar b44_swing.jar
+Main-Class: com.barbre.fiddle.Fiddle
+
